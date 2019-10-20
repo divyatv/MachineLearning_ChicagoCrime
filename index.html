@@ -9,12 +9,12 @@
 <br>
 <h2>HEXBIN PLOT</h2>
 <select id="itemImage" name="itemImage">
-    <option value="Battery" data-img="battery-hexbin.png">Battery</option>
-    <option value="Damage" data-img="damage-hexbin.png">Damage</option>
-    <option value="Other" data-img="other-hexbin.png">Other crime</option>
-    <option value="Narcotics" data-img="narcotics-hexbin.png">Narcotics</option>
-    <option value="Theft" data-img="theft-hexbin.png">Theft</option>
-    <option value="Burglary" data-img="burglary-hexbin.png">Burglary</option>
+    <option value="Battery" data-img="Resources/battery-hexbin.png">Battery</option>
+    <option value="Damage" data-img="Resources/damage-hexbin.png">Damage</option>
+    <option value="Other" data-img="Resources/other-hexbin.png">Other crime</option>
+    <option value="Narcotics" data-img="Resources/narcotics-hexbin.png">Narcotics</option>
+    <option value="Theft" data-img="Resources/theft-hexbin.png">Theft</option>
+    <option value="Burglary" data-img="Resources/burglary-hexbin.png">Burglary</option>
 </select>
 <br>
 <img id="changeImage" src=""/>
@@ -25,7 +25,7 @@
            };
           function showFormatImage() {
              var image = document.getElementById("changeImage");
-             image.src = $('select[name=itemImage] option:selected').attr('data-img');
+             image.src = $('select[name=itemImage] option:selected').attr("data-img");
              return false;
           }
 </script>
