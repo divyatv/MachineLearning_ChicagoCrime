@@ -13,10 +13,12 @@ app = Flask(__name__)
 # 
 
 #### Main route ############################################################################################
-@app.route("/")
-def home():
-    """Return the homepage with a plot for team"""
-    return(render_template("index.html"))
-    #return("Hello world")
 
-app.run(host='localhost', port= 5001)
+@app.route('/', methods=['GET'])
+def dropdown():
+    crimes = ['battery', 'narcotics', 'burglary', 'damage','other','theft']
+    return render_template('main.html', crimes=crimes)
+
+if __name__ == "__main__":
+    app.run(host='localhost', port= 5001)
+
