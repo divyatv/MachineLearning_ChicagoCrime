@@ -22,7 +22,7 @@ data_plot.ipynb:
 	       (I have example in index.html)
 
 
-knn.ipynb:
+ml.ipynb:
     input:  the data set from data_mining script - Crime_selected.csv
     output:  3 ML logic:  knn, decision tree, random forest
 
