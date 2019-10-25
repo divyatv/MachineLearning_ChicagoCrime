@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from flask import send_file
 from flask_sqlalchemy import SQLAlchemy 
 from flask_wtf import FlaskForm 
 from wtforms import SelectField
@@ -23,16 +24,23 @@ class Form(FlaskForm):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = Form()
+    crime_dic = {'ba':'battery', 'bu':'burglary', 'da':'damage', \
+                 'n':'narcotics', 'o':'other', 't':'theft' }
+    plot_dic = {'pl':'', 'he':'hexbin', 'sb':'seaborn-box', 'sp':'seaborn-pair'}
 
     if request.method == 'POST':
-        #plot = form.plot.data
+        plot = form.plot.data
         crime = form.crime.data
         print('crime=', form.crime.data, " len=", len(crime))
         print('plot=', form.plot.data)
-        return 'ok done test'
-        #return '<h1>State: {}, City: {}</h1>'.format(form.crime.data, plot)
+        if plot == 'pl':
+            filename = 'static/' +  crime_dic[crime] + '.png'
+        else:
+            filename = 'static/' +  crime_dic[crime] + '-' + plot_dic[plot] +'.png'
+        print("filename=", filename)
+        return send_file(filename, mimetype='image/jpg')
 
-    return render_template('main.html', form=form)
+    return render_template('plot.html', form=form)
 '''
 @app.route('/plot/<crime>')
 def plot(crime):

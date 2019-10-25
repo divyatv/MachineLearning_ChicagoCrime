@@ -1,3 +1,4 @@
+-------   First week ------------------------------
 Chicago Crime - Machine learning and Predictions
 
 This branch includes 3 scripts:
@@ -18,7 +19,7 @@ data_plot.ipynb:
 
     Function:  I provide a TEST code in the __name__ == __main__ as examples.
                You can use that create a html/java script to plot the
-	       data from flask as you did in project2.a
+	       data from flask as you did in project2.
 	       (I have example in index.html)
 
 
@@ -27,8 +28,14 @@ ml.ipynb:
     output:  3 ML logic:  knn, decision tree, random forest
 
     Function: I also provide TEST code, please check __name__ == __main__ block
-              You can select X_values and y_values to run all 3 ML logic. Also,               I suggest you save different result in a png files and using the
+              You can select X_values and y_values to run all 3 ML logic. Also,               
+	      I suggest you save different result in a png files and using the
 	      flask to display them for demo. (Otherwise, it will take long
 	      time to run).   YOu run off-line, collect the information in a 
 	      directory. In the demo, you can just show the result very quick.
 
+-----------------    On second week  -------------------------------------
+
+start to write flask code to display plot to browser
+
+This will be done on app.py and templates/main.html
