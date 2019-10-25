@@ -1,18 +1,14 @@
-<html>
-<!-- Add comments here.-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Dropdown</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
-<!-- The information between the BODY and /BODY tags is displayed.-->
 <body>
-<h1>CRIME PLOT</h1>
-<br>
-<h2>HEXBIN PLOT ON CRIME TYPE</h2>
-<select name= crimes method="GET" action="/">
-  {% for crime in crimes %}
-  <option value= "{{ crime }}" SELECTED>{{ crime }}</option>"
-  {% endfor %}
-</select>
-<!-- TO DO drop menu to select png files -->
+    <form method="POST">
+    {{ form.crime }}
+    {{ form.plot }}
+    <input type="submit">
+    </form>
 </body>
 </html>
