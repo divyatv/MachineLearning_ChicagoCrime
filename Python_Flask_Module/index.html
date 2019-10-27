@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Chicago Crime</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">CHICAGO</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="http://localhost:5000/">Home</a></li>
+				<li><a href="http://localhost:5000/plot">Crime Plots</a></li>
+			
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>CHICAGO CRIME DATA ANALYSIS</h1>
+					<p><strong>Our experiece with Chicago's crime dataset from a machine learning perspective </strong><a href="https://templated.co/"></a> </p>
+				</div>
+				<video autoplay loop muted playsinline src="{{ url_for('static', filename='images/banner.mp4') }}"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Sem turpis amet semper</h2>
+						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>Feugiat consequat</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<h3>Ante sem integer</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>Ipsum consequat</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>Interdum gravida</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+									<h3>Summary Report</h3>
+								</header>
+								<p>Write about the prediction accuracy % for each algorithms <br>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+									<h3>Accumsan viverra</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+
+
+		<!-- Testimonials -->
+			<section class="wrapper">
+				<div class="inner">
+					<!-- <header class="special">
+						<h2>Achieved accuracy of the models</h2>
+						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+					</header> -->
+					<div class="testimonials">
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" />
+									</div>
+									<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+								<div class="content">
+									<blockquote>
+										<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+									</blockquote>
+									<div class="author">
+										<div class="image">
+											<img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" />
+										</div>
+										<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+									</div>
+								</div>
+							</section>
+							<section>
+									<div class="content">
+										<blockquote>
+											<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+										</blockquote>
+										<div class="author">
+											<div class="image">
+												<img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" />
+											</div>
+											<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+										</div>
+									</div>
+								</section>
+								<section>
+										<div class="content">
+											<blockquote>
+												<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+											</blockquote>
+											<div class="author">
+												<div class="image">
+													<img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" />
+												</div>
+												<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+											</div>
+										</div>
+									</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" />
+									</div>
+									<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="{{ url_for('static', filename='images/pic02.jpg')}}" alt="" />
+									</div>
+									<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+				
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script> -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+			<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+			<script src="{{ url_for('static', filename='barchart.js') }}"></script>
+
+	</body>
+</html>
