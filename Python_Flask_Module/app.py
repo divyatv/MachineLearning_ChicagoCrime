@@ -74,15 +74,15 @@ def count_result(crime_type):
 
     # Filter data based on type of crime and year selected
 
-    crime_2001_df = crime_df.loc[crime_df['Year'] == 2001]
-    crime_2002_df = crime_df.loc[crime_df['Year'] == 2002]
-    crime_2003_df = crime_df.loc[crime_df['Year'] == 2003]
-    crime_2004_df = crime_df.loc[crime_df['Year'] == 2004]
-    crime_2005_df = crime_df.loc[crime_df['Year'] == 2005]
-    crime_2006_df = crime_df.loc[crime_df['Year'] == 2006]
-    crime_2007_df = crime_df.loc[crime_df['Year'] == 2007]
-    crime_2008_df = crime_df.loc[crime_df['Year'] == 2008]
-    crime_2009_df = crime_df.loc[crime_df['Year'] == 2009]
+    # crime_2001_df = crime_df.loc[crime_df['Year'] == 2001]
+    # crime_2002_df = crime_df.loc[crime_df['Year'] == 2002]
+    # crime_2003_df = crime_df.loc[crime_df['Year'] == 2003]
+    # crime_2004_df = crime_df.loc[crime_df['Year'] == 2004]
+    # crime_2005_df = crime_df.loc[crime_df['Year'] == 2005]
+    # crime_2006_df = crime_df.loc[crime_df['Year'] == 2006]
+    # crime_2007_df = crime_df.loc[crime_df['Year'] == 2007]
+    # crime_2008_df = crime_df.loc[crime_df['Year'] == 2008]
+    # crime_2009_df = crime_df.loc[crime_df['Year'] == 2009]
     crime_2010_df = crime_df.loc[crime_df['Year'] == 2010]
     crime_2011_df = crime_df.loc[crime_df['Year'] == 2011]
     crime_2012_df = crime_df.loc[crime_df['Year'] == 2012]
@@ -97,24 +97,24 @@ def count_result(crime_type):
 
     #Sift through the data to classify by "crime type"
 
-    crime_2001 = crime_2001_df.loc[crime_2001_df['Primary Type'] == crime_type]
-    count_2001 = int(crime_2001["Primary Type"].count())
-    crime_2002 = crime_2002_df.loc[crime_2002_df['Primary Type'] == crime_type]
-    count_2002 = int(crime_2002["Primary Type"].count())
-    crime_2003 = crime_2003_df.loc[crime_2003_df['Primary Type'] == crime_type]
-    count_2003 = int(crime_2003["Primary Type"].count())
-    crime_2004 = crime_2004_df.loc[crime_2004_df['Primary Type'] == crime_type]
-    count_2004 = int(crime_2004["Primary Type"].count())
-    crime_2005 = crime_2005_df.loc[crime_2005_df['Primary Type'] == crime_type]
-    count_2005 = int(crime_2005["Primary Type"].count())
-    crime_2006 = crime_2006_df.loc[crime_2006_df['Primary Type'] == crime_type]
-    count_2006 = int(crime_2006["Primary Type"].count())
-    crime_2007 = crime_2007_df.loc[crime_2007_df['Primary Type'] == crime_type]
-    count_2007 = int(crime_2007["Primary Type"].count())
-    crime_2008 = crime_2008_df.loc[crime_2008_df['Primary Type'] == crime_type]
-    count_2008 = int(crime_2008["Primary Type"].count())
-    crime_2009 = crime_2009_df.loc[crime_2009_df['Primary Type'] == crime_type]
-    count_2009 = int(crime_2009["Primary Type"].count())
+    # crime_2001 = crime_2001_df.loc[crime_2001_df['Primary Type'] == crime_type]
+    # count_2001 = int(crime_2001["Primary Type"].count())
+    # crime_2002 = crime_2002_df.loc[crime_2002_df['Primary Type'] == crime_type]
+    # count_2002 = int(crime_2002["Primary Type"].count())
+    # crime_2003 = crime_2003_df.loc[crime_2003_df['Primary Type'] == crime_type]
+    # count_2003 = int(crime_2003["Primary Type"].count())
+    # crime_2004 = crime_2004_df.loc[crime_2004_df['Primary Type'] == crime_type]
+    # count_2004 = int(crime_2004["Primary Type"].count())
+    # crime_2005 = crime_2005_df.loc[crime_2005_df['Primary Type'] == crime_type]
+    # count_2005 = int(crime_2005["Primary Type"].count())
+    # crime_2006 = crime_2006_df.loc[crime_2006_df['Primary Type'] == crime_type]
+    # count_2006 = int(crime_2006["Primary Type"].count())
+    # crime_2007 = crime_2007_df.loc[crime_2007_df['Primary Type'] == crime_type]
+    # count_2007 = int(crime_2007["Primary Type"].count())
+    # crime_2008 = crime_2008_df.loc[crime_2008_df['Primary Type'] == crime_type]
+    # count_2008 = int(crime_2008["Primary Type"].count())
+    # crime_2009 = crime_2009_df.loc[crime_2009_df['Primary Type'] == crime_type]
+    #count_2009 = int(crime_2009["Primary Type"].count())
     crime_2010 = crime_2010_df.loc[crime_2010_df['Primary Type'] == crime_type]
     count_2010 = int(crime_2010["Primary Type"].count())
     crime_2011 = crime_2011_df.loc[crime_2011_df['Primary Type'] == crime_type]
@@ -135,13 +135,16 @@ def count_result(crime_type):
     count_2018 = int(crime_2018["Primary Type"].count())
 
     
-    year = ['2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014',\
-            '2015','2016','2017','2018']
+    # year = ['2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014',\
+    #         '2015','2016','2017','2018']
+    year = ['2010','2011','2012','2013','2014','2015','2016','2017','2018']        
 
     # specify an array crime_count
 
-    crime_count = [count_2001, count_2002, count_2003, count_2004, count_2005, count_2006, count_2007, count_2008, count_2009, \
-                   count_2010, count_2011, count_2012, count_2013, count_2014, count_2015, count_2016, count_2017, count_2018]
+    # crime_count = [count_2001, count_2002, count_2003, count_2004, count_2005, count_2006, count_2007, count_2008, count_2009, \
+    #                count_2010, count_2011, count_2012, count_2013, count_2014, count_2015, count_2016, count_2017, count_2018]
+    
+    crime_count = [count_2010, count_2011, count_2012, count_2013, count_2014, count_2015, count_2016, count_2017, count_2018]
     
     # define a dataframe using the above
 
@@ -154,8 +157,31 @@ def count_result(crime_type):
     final_result = json.dumps(mod_result)
 
     return final_result
+#####################################################################################    
+from flask import render_template
+from bokeh.embed import file_html
+from bokeh.plotting import figure
+from bokeh.resources import CDN
 
+@app.route('/gmplot', methods=['GET'])
+def example():
 
+    plot = figure()
+    plot.circle([1,2], [3,4])
+
+    html = file_html(plot, CDN)
+
+    return render_template('mapplot.html', plot=html)
+
+@app.route('/crime', methods=['GET'])
+def example():
+
+    plot = figure()
+    plot.circle([1,2], [3,4])
+
+    html = file_html(plot, CDN)
+
+    return render_template('mapplot.html', plot=html)
 
 ############################################################################################################
 ### Running main function
