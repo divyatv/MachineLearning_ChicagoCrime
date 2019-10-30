@@ -1,18 +1,19 @@
 # Machine learning workflow on Chicago crime dataset.
 
 ## Team:
-Divya Vishnumurthy
-Frances Doyle
-Harshavardhan Suresh
-Kevin Kao
-Joe Strawinski
-Ramesh Kalagnanam
+
+* Divya Vishnumurthy
+* Frances Doyle
+* Harshavardhan Suresh
+* Kevin Kao
+* Joe Strawinski
+* Ramesh Kalagnanam
 
 ## Solution statement goals:
-Define scope (including Data Source)
-Define target performance
-Define context for usage
-Define how solution will be created
+* Define scope (including Data Source)
+* Define target performance
+* Define context for usage
+* Define how solution will be created
 
 
 ## Our solution statement:
