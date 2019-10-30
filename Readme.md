@@ -1,13 +1,21 @@
-Machine learning workflow on Chicago crime dataset.
+#Machine learning workflow on Chicago crime dataset.
 
-Solution statement goals:
+##Team:
+Divya Vishnumurthy
+Frances Doyle
+Harshavardhan Suresh
+Kevin Kao
+Joe Strawinski
+Ramesh Kalagnanam
+
+##Solution statement goals:
 Define scope (including Data Source)
 Define target performance
 Define context for usage
 Define how solution will be created
 
 
-Our solution statement:
+##Our solution statement:
 Use the machine learning workflow to process and transform Chicago crime dataset to create a prediction model. This model must predict if a crime will result in an arrest with 70% or greater accuracy.
 
 Data is extracted from the Chicago Police Department's Citizen Law Enforcement Analysis and Reporting system
@@ -17,6 +25,7 @@ https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/da
 
 
  ![Most frequent location](/Images/Street_most_dangerous.png)
+ ![GitHub Logo](/images/logo.png)
  
 
 
