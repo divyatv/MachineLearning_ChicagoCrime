@@ -24,7 +24,7 @@ As of 10/27/19, 6.9 million records
 https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/data
 
 
- ![Most frequent location](/Images/Street_most_dangerous.png)
+ ![Most frequent location](Street_most_dangerous.png)
  ![GitHub Logo](/images/logo.png)
  
 
