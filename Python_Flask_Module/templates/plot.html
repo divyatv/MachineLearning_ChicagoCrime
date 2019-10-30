@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>CHICAGO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://www.jsdelivr.com/package/npm/chart.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+		<script>
+		   var data= '{{data}}';
+		</script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet1.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="http://localhost:5000/">CHICAGO</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+				<li><a href="http://localhost:5000/">Home</a></li>
+				<li><a href="http://localhost:5000/plot">Crime Count</a></li>
+				<li><a href="http://localhost:5000/googlemap">Crime heat map</a></li>
+				
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>CHICAGO CRIME VISUALIZATION</h1>
+            </div>
+            
+           
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>Crime plots for crime type and time of the crime</h2>
+						</header>
+						<p>Plot shows the occurrence of the crime at hour of the day. 
+                             </p>
+                        <hr />
+                        
+						<select name="crime_type" id="crime_type" onchange="setImage(this);">
+							
+								<option value="{{ url_for('static', filename='battery-hexbin.png')}}">Battery</option>
+								<option value="{{ url_for('static', filename='damage-hexbin.png')}}">Damage</option>								
+								<option value="{{ url_for('static', filename='theft-hexbin.png')}}">Theft</option>
+								<option value="{{ url_for('static', filename='burglary-hexbin.png')}}">Burglary</option>
+								<option value="{{ url_for('static', filename='narcotics-hexbin.png')}}">Narcotics</option>
+							  </select><br />
+							  <img src="" name="image-swap" />
+							<br>
+							<script>
+							   function setImage(select){
+							  var image = document.getElementsByName("image-swap")[0];
+							  image.src = select.options[select.selectedIndex].value;
+							}
+							</script>
+                      
+					
+					</div>
+					<div class="content">
+						<header>
+							<h2>Crime Type and count for each year</h2>
+						</header>
+						<p>Plot shows crime count for each crime type through years. </p>
+					
+							<div class="container" style="margin-top:100px">
+							<div class="row">
+							   <!-- <div class="col-sm-5 mb-3 mb-md-0"> -->
+								  <!-- <img src="{{ url_for('static', filename='chicago_skyline.jpg')}}" width="450" height="300" alt="Chicago Skyline">
+								  <h5>Beautiful Chicago Skyline</h5> -->
+							  
+							   <div class="col-sm-3 mb-3 mb-md-0">
+								  <div class="card">
+									 <div class="content-box">
+										<div class="card-body">
+										   <h5 class="card-title">Select Crime Type Below</h5>
+										   <form id="myCrimeForm">
+											  <select id="selectCrime" onchange="optionChanged(this.value)">
+												 <option>Choose a Crime</option>
+												 <script>
+													var myCrimeArray = ["ASSAULT", "BATTERY", "CRIMINAL DAMAGE", "NARCOTICS", "THEFT"];
+													for(i=0; i<myCrimeArray.length; i++) {
+														document.write('<option value="' + myCrimeArray[i] +'">' + myCrimeArray[i] + '</option>');
+													}
+												 </script>
+											  </select>
+										   </form>
+										   <button id="filter-btn-crime" type="button" class="btn btn-primary">Display Crime Stats</button>
+										</div>
+									 </div>
+								  </div>
+							   </div>
+							   <div class="col-sm-9 mb-3 mb-md-0">
+								  <!--<img src="chicago_skyline.jpg" width="400" height="300" alt="Chicago Skyline">-->
+								  <canvas id="count-crime" width="400" height="270"></canvas>
+								  <!-- <h5>Count of Crime</h5> -->
+								  <!-- <h5>Beautiful Chicago Skyline</h5> -->
+							   </div>
+							</div>
+							<!-- Footer section -->
+						
+                        
+						
+                      
+					</div>
+
+				</div>
+			</section>
+
+			<footer class="page-footer pt-4">
+					<div class="container">      
+							<div style="background-color: #313331; color: white">
+					<!-- Copyright -->
+					<div class="font-small white footer-copyright text-center py-3">© 2019 Copyright:
+					  <a href="https://www.bootcampspot.com/login"> UNC Bootcamp.com</a>
+					</div>
+					</div>
+					<!-- Copyright -->
+		
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+			<script src="{{ url_for('static', filename='barchart.js') }}"></script>
+
+	</body>
+</html>

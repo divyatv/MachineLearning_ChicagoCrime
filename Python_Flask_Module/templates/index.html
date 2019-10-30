@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Chicago Crime</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	
+	</head>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="http://localhost:5000/">CHICAGO</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="http://localhost:5000/">Home</a></li>
+				<li><a href="http://localhost:5000/plot">Crime Count</a></li>
+				<li><a href="http://localhost:5000/googlemap">Crime heat map</a></li>
+			
+			</ul>
+		</nav>
+
+		<!-- Banner -->
+			<section  height="100" id="banner">
+				<div class="inner">
+					<h1>CHICAGO CRIME DATA ANALYSIS</h1>
+					<p><strong>Our experiece with Chicago's crime dataset from a machine learning perspective</strong><a href="https://templated.co/"></a> </p>
+				</div>
+				<video autoplay loop muted playsinline src="{{ url_for('static', filename='images/banner.mp4') }}"></video>
+			</section>
+			<div class="container" style="margin-top:100px">
+					<div class="row">
+					  <div class="col-sm-12 ">
+						<div class="card">
+						  <div class="card-body">
+							
+						   <!--  <div w3-include-html="data_from_render.html"></div> -->
+							<!-- <iframe src="data_from_render.html" height="200" width="300"></iframe> -->
+							<div class="embed-responsive embed-responsive-16by9">
+									<!-- <iframe width="853" height="480" src="'http://localhost:5000/mapplot'" frameborder="0" ></iframe> -->
+								<iframe width="1400" height="800" class="embed-responsive-item" src="http://localhost:5000/mapplot" frameborder="0"  allowfullscreen></iframe>
+							  </div>
+							
+							 
+						   </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+
+		<!-- Footer -->
+		<footer class="page-footer pt-4">
+				<div class="container">      
+						<div style="background-color: #313331; color: white">
+				<!-- Copyright -->
+				<div class="font-small white footer-copyright text-center py-3">© 2019 Copyright:
+				  <a href="https://www.bootcampspot.com/login"> UNC Bootcamp.com</a>
+				</div>
+				</div>
+				<!-- Copyright -->
+	
+	</footer>
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script> -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+			<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+			<script src="{{ url_for('static', filename='barchart.js') }}"></script>
+
+	</body>
+</html>
