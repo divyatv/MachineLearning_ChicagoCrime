@@ -25,20 +25,27 @@ As of 10/27/19, 6.9 million records
 https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/data
 
 
- ![Most frequent location](https://github.com/divyatv/Project3/blob/master/Images/Street_most_dangerous.png)
- 
- 
- ## Algorithms used
+## Algorithms used
  * Random Forest
  * Logistic Regression
  * Decision Tree
  * Naive Bayes
  
- ## End Result
+## End Result
  * Our model trained on Random Forest predicted arrests with an accuracy of 85%
  * Our model trained on Logistic Regression predicted arrests with an accuracy of 87%
  * Our model trained on Random Decision Tree arrests with an accuracy of 87%
  * Our model trained on Naive Bayes predicted arrests with an accuracy of 74.2%
+ 
+## Other plots
+
+ ![Most frequent location](https://github.com/divyatv/Project3/blob/master/Images/Street_most_dangerous.png)
+ ![Arrests for Crimecounts and Community](/images/Community.png)
+ ![Arrests for CrimeType and CrimeCounts](/images/IUCRchart.png)
+ ![Arrests for CrimeType and Count](/images/PrimaryTypechart.png)
+ ![Arrests in different wards](/images/Ward.png)
+ 
+ 
 
 
 
