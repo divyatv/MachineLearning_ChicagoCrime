@@ -35,7 +35,7 @@ https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/da
 ## End Result
  * Our model trained on Random Forest predicted arrests with an accuracy of 85%
  * Our model trained on Logistic Regression predicted arrests with an accuracy of 87%
- * Our model trained on Random Decision Tree arrests with an accuracy of 87%
+ * Our model trained on Decision Tree arrests with an accuracy of 87%
  * Our model trained on Naive Bayes predicted arrests with an accuracy of 74.2%
  
 ## Other plots
