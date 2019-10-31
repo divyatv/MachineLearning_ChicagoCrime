@@ -19,6 +19,7 @@
 ## Our solution statement:
 Use the machine learning workflow to process and transform Chicago crime dataset to create a prediction model. This model must predict if a crime will result in an arrest with 70% or greater accuracy.
 
+## Data Source
 Data is extracted from the Chicago Police Department's Citizen Law Enforcement Analysis and Reporting system
 Reported crime between 2001 and present (less the most recent seven days)
 As of 10/27/19, 6.9 million records
