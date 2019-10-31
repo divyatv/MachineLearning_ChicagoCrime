@@ -40,9 +40,7 @@ https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2/da
 ## Other plots
 
  ![Most frequent location](https://github.com/divyatv/Project3/blob/master/Images/Street_most_dangerous.png)
- ![Arrests for Crimecounts and Community](/images/Community.png)
- ![Arrests for CrimeType and CrimeCounts](/images/IUCRchart.png)
- ![Arrests for CrimeType and Count](/images/PrimaryTypechart.png)
+ ![Arrests for CrimeType and Count](https://github.com/divyatv/Project3/blob/master/Images/PrimaryTypechart.png)
  ![Arrests in different wards](/images/Ward.png)
  
  
