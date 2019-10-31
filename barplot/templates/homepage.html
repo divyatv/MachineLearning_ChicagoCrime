@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+   <title>Chicago Crime Analysis</title>
+   <!-- Declare style sheet and js-->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Home page</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="https://www.jsdelivr.com/package/npm/chart.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+   <script>
+      var data= '{{data}}';
+   </script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet1.css')}}">
+</head>
+<body>
+   <header>
+      <!-- navbar-->
+      <div class="bs-example">
+         <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <h1>Chicago Crime Analysis</h1>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+               <div class="navbar-nav ml-auto">
+                  <a href="homepage.html" class="nav-item nav-link active">Home Page</a>
+                  <a href="chicago_crime_heatmap.html" class="nav-item nav-link active">Heat Map for Crimes</a>
+                  <a href="arrest_percent_heatmap.html" class="nav-item nav-link active">Heat Map for Arrests</a>
+                  <a href="machine_learning_display.html" class="nav-item nav-link active">Machine Learning Display</a>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <!-- Design containers and the rows and columns-->
+   <main>
+      <div class="container" style="margin-top:100px">
+      <div class="row">
+         <div class="col-sm-5 mb-3 mb-md-0">
+            <img src="{{ url_for('static', filename='chicago_skyline.jpg')}}" width="450" height="300" alt="Chicago Skyline">
+            <h5>Beautiful Chicago Skyline</h5>
+         </div>
+         <div class="col-sm-3 mb-3 mb-md-0">
+            <div class="card">
+               <div class="content-box">
+                  <div class="card-body">
+                     <h5 class="card-title">Select Crime Type Below</h5>
+                     <form id="myTypeForm">
+                        <select id="selectType" onchange="optionChanged(this.value)">
+                           <option>Choose a Crime</option>
+                           <script>
+                              var CrimeArray = ["ASSAULT", "BATTERY", "CRIMINAL DAMAGE", "NARCOTICS", "THEFT"];
+                              for(i=0; i<CrimeArray.length; i++) {
+                                  document.write('<option value="' + CrimeArray[i] +'">' + CrimeArray[i] + '</option>');
+                              }
+                           </script>
+                        </select>
+                     </form>
+                     <!-- <form id="myDateForm">
+                        <select id="selectDate">
+                           <option>Choose a Year</option>
+                           <script>
+                              var myDateArray = ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010","2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"];
+                              for(i=0; i<myDateArray.length; i++) {
+                                  document.write('<option value="' + myDateArray[i] +'">' + myDateArray[i] + '</option>');
+                              }
+                           </script>
+                        </select>
+                     </form> -->
+                     <button id="filter-btn-type" type="button" class="btn btn-primary">Display Police Efficiency</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-4 mb-3 mb-md-0">
+            <!--<img src="chicago_skyline.jpg" width="400" height="300" alt="Chicago Skyline">-->
+            <canvas id="count-type" width="400" height="400"></canvas>
+            <!-- <h5>Count of Crime</h5> -->
+            <!-- <h5>Beautiful Chicago Skyline</h5> -->
+         </div>
+      </div>
+      <!-- Footer section -->
+   </main>
+   <footer class="page-footer   special-color-dark pt-4">
+      <div class="container">
+      <div style="background-color: #313331; border-top: 8px solid #22a3a3; color: white">
+         <!-- Copyright -->
+         <div class="font-small white footer-copyright text-center py-3">© 2017 Copyright:
+            <a href="https://www.bootcampspot.com/login"> UNC Bootcamp.com</a>
+         </div>
+      </div>
+      <!-- Copyright -->
+   </footer>
+   <!-- End of Footer -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   <script src="{{ url_for('static', filename='effbarchart.js')}}"></script>
+</body>
+</html>
